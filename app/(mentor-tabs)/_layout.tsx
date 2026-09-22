@@ -1,11 +1,11 @@
 import { Tabs } from 'expo-router';
 import { Ionicons } from '@expo/vector-icons';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
-import { COLORS } from '../../constants/brand';
+import { COLORS } from '@/constants/brand';
 
-export default function TabLayout() {
+export default function MentorTabsLayout() {
   const insets = useSafeAreaInsets();
-  
+
   return (
     <Tabs
       screenOptions={{
@@ -26,34 +26,34 @@ export default function TabLayout() {
       <Tabs.Screen
         name="index"
         options={{
-          title: 'Beranda',
+          title: 'Dashboard',
           tabBarIcon: ({ color, focused }) => (
-            <Ionicons name={focused ? 'home' : 'home-outline'} size={22} color={color} />
+            <Ionicons name={focused ? 'grid' : 'grid-outline'} size={22} color={color} />
           ),
         }}
       />
       <Tabs.Screen
-        name="explore"
+        name="my-modules"
         options={{
-          title: 'Jelajah',
+          title: 'Modul Saya',
           tabBarIcon: ({ color, focused }) => (
-            <Ionicons name={focused ? 'compass' : 'compass-outline'} size={22} color={color} />
+            <Ionicons name={focused ? 'book' : 'book-outline'} size={22} color={color} />
           ),
         }}
       />
       <Tabs.Screen
-        name="mentor"
+        name="schedule"
         options={{
-          title: 'Mentor',
+          title: 'Jadwal',
           tabBarIcon: ({ color, focused }) => (
-            <Ionicons name={focused ? 'people' : 'people-outline'} size={22} color={color} />
+            <Ionicons name={focused ? 'calendar' : 'calendar-outline'} size={22} color={color} />
           ),
         }}
       />
       <Tabs.Screen
-        name="profile"
+        name="account"
         options={{
-          title: 'Profil',
+          title: 'Akun',
           tabBarIcon: ({ color, focused }) => (
             <Ionicons name={focused ? 'person' : 'person-outline'} size={22} color={color} />
           ),
